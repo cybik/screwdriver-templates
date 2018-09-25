@@ -1,0 +1,8 @@
+shared:
+    image: node:6
+
+jobs:
+    main:
+        template: screwdriver/template-publish
+        environment:
+            SD_TEMPLATE_PATH: './sd-template-android.yaml'
