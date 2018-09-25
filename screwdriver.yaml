@@ -5,4 +5,4 @@ jobs:
     main:
         template: screwdriver/template-publish
         environment:
-            SD_TEMPLATE_PATH: './sd-template-android.yaml'
+            SD_TEMPLATE_PATH: './sd-template-publish.yaml'
