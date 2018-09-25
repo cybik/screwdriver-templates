@@ -3,6 +3,7 @@ shared:
 
 jobs:
     main:
-        template: screwdriver/template-publish
-        environment:
-            SD_TEMPLATE_PATH: './sd-template-publish.yaml'
+        steps:
+            - install: npm install screwdriver-template-main
+            - rename:  mv sd-template-android.yaml sd-template.yaml
+            - publish: node ./node_modules/.bin/template-publish
