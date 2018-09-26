@@ -7,3 +7,5 @@ jobs:
         steps:
             - prep: npm install screwdriver-template-main
             - template: node ./node_modules/.bin/template-publish
+        environment:
+              SD_TEMPLATE_PATH: './sd-template-publish.yaml'
