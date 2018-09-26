@@ -2,8 +2,14 @@ shared:
     image: node:6
 
 jobs:
-    main:
+    template:
         requires: [~pr, ~commit]
         steps:
             - prep: npm install screwdriver-template-main
-            - template: screwdriver/template-publish
+            - prepfile: mv sd-template-publish.yaml sd-template.yaml
+            - publish: node ./node_modules/.bin/template-publish
+    android:
+        requires: [template]
+        template: screwdriver/template-publish
+        steps:
+            - preinstall: mv sd-template-android.yaml sd-template.yaml
