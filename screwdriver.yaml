@@ -3,5 +3,6 @@ shared:
 
 jobs:
     main:
-        prep: npm install screwdriver-template-main
-        template: screwdriver/template-publish
+        steps:
+            - prep: npm install screwdriver-template-main
+            - template: screwdriver/template-publish
