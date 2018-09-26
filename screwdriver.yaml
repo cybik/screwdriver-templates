@@ -6,4 +6,4 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - prep: npm install screwdriver-template-main
-            - template: screwdriver/template-publish
+            - template: node ./node_modules/.bin/template-publish
