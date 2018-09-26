@@ -3,6 +3,7 @@ shared:
 
 jobs:
     main:
+        requires: [~pr, ~commit]
         steps:
-             prep: npm install screwdriver-template-main
-             template: screwdriver/template-publish
+            - prep: npm install screwdriver-template-main
+            - template: screwdriver/template-publish
