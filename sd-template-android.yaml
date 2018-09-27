@@ -1,7 +1,7 @@
 name: screwdriver/android-build
 version: 0.0.1
 description: Builds some Android apps
-maintainer: me@home@work.com
+maintainer: me@work.com
 config:
     image: runmymind/docker-android-sdk
     steps:
