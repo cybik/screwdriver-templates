@@ -5,6 +5,6 @@ maintainer: me@work.com
 config:
     image: runmymind/docker-android-sdk
     steps:
-	- prebuild: echo 'Template found, building now.'
+        - prebuild: echo 'Template found, building now.'
         - build: ./gradlew assembleRelease
         - postbuild: echo 'Template done.'
