@@ -2,7 +2,7 @@ shared:
     image: node:6
 
 jobs:
-    main:
+    publisher:
         requires: [~pr, ~commit]
         steps:
             - prep: npm install screwdriver-template-main
@@ -10,7 +10,7 @@ jobs:
         environment:
               SD_TEMPLATE_PATH: './sd-template-publish.yaml'
     android:
-        requires: [~pr, ~commit]
+        requires: [publisher]
         steps:
             - prep: npm install screwdriver-template-main
             - template: node ./node_modules/.bin/template-publish
